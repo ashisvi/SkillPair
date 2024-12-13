@@ -1,0 +1,19 @@
+[
+  {
+    "chatId": "chat1",
+    "user1": "user1",
+    "user2": "user2",
+    "messages": [
+      {
+        "sender": "user1",
+        "text": "Hi Bob, I'd love to learn some guitar tips!",
+        "timestamp": "2024-12-10T14:20:00Z"
+      },
+      {
+        "sender": "user2",
+        "text": "Sure! Let's set up a time to chat.",
+        "timestamp": "2024-12-10T14:25:00Z"
+      }
+    ]
+  }
+]

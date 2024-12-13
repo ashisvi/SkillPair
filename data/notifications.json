@@ -1,0 +1,16 @@
+[
+  {
+    "notificationId": "notif1",
+    "userId": "user1",
+    "message": "New match found: Bob Smith!",
+    "timestamp": "2024-12-10T13:45:00Z",
+    "type": "match"
+  },
+  {
+    "notificationId": "notif2",
+    "userId": "user1",
+    "message": "Your session with Bob Smith is scheduled for Dec 15 at 10:30 AM.",
+    "timestamp": "2024-12-10T14:00:00Z",
+    "type": "session"
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "match1",
+    "user1": "user1",
+    "user2": "user2",
+    "status": "pending",
+    "scheduledTime": "2024-12-15T10:30:00Z"
+  },
+  {
+    "id": "match2",
+    "user1": "user2",
+    "user2": "user3",
+    "status": "confirmed",
+    "scheduledTime": "2024-12-17T15:00:00Z"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "user1",
+    "name": "Alice Johnson",
+    "profilePicture": "https://randomuser.me/api/portraits/women/10.jpg",
+    "bio": "Aspiring chef and coding enthusiast.",
+    "skillsOffered": ["Cooking", "Python Programming"],
+    "skillsWanted": ["Spanish", "Yoga"],
+    "rating": 4.7,
+    "location": "San Francisco, CA"
+  },
+  {
+    "id": "user2",
+    "name": "Bob Smith",
+    "profilePicture": "https://randomuser.me/api/portraits/men/5.jpg",
+    "bio": "Love sharing guitar tips and learning languages.",
+    "skillsOffered": ["Guitar", "English"],
+    "skillsWanted": ["French", "Photography"],
+    "rating": 4.3,
+    "location": "New York, NY"
+  },
+  {
+    "id": "user3",
+    "name": "Catherine Lee",
+    "profilePicture": "https://randomuser.me/api/portraits/women/20.jpg",
+    "bio": "Fitness trainer passionate about teaching and learning.",
+    "skillsOffered": ["Yoga", "Fitness Coaching"],
+    "skillsWanted": ["Cooking", "Painting"],
+    "rating": 4.9,
+    "location": "Austin, TX"
+  }
+]

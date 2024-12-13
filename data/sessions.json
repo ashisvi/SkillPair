@@ -1,0 +1,18 @@
+[
+  {
+    "sessionId": "session1",
+    "user1": "user1",
+    "user2": "user2",
+    "skillExchange": ["Guitar for Cooking"],
+    "scheduledTime": "2024-12-15T10:30:00Z",
+    "status": "upcoming"
+  },
+  {
+    "sessionId": "session2",
+    "user1": "user3",
+    "user2": "user2",
+    "skillExchange": ["Yoga for Photography"],
+    "scheduledTime": "2024-12-17T15:00:00Z",
+    "status": "completed"
+  }
+]
