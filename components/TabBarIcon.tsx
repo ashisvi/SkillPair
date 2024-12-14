@@ -9,7 +9,7 @@ export const TabBarIcon = ({
   color: string;
   focused: boolean;
 }) => {
-  return <Icon color={color} variant={focused ? 'Bold' : 'Outline'} size={30} />;
+  return <Icon color={color} variant={focused ? 'Bold' : 'Outline'} size={32} />;
 };
 
 export const styles = StyleSheet.create({

@@ -14,6 +14,10 @@ export default function RootLayout() {
       <StatusBar style="auto" />
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen
+          name="[userId]/index"
+          options={{ title: 'Profile', headerTitleAlign: 'center' }}
+        />
       </Stack>
     </GestureHandlerRootView>
   );
