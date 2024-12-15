@@ -1,19 +1,27 @@
-import { StyleSheet } from 'react-native';
+import Animated, { useAnimatedStyle, withSpring } from 'react-native-reanimated';
 
-export const TabBarIcon = ({
-  Icon,
-  color,
-  focused,
-}: {
+type TabBarIconProps = {
   Icon: React.ElementType;
   color: string;
   focused: boolean;
-}) => {
-  return <Icon color={color} variant={focused ? 'Bold' : 'Outline'} size={32} />;
 };
 
-export const styles = StyleSheet.create({
-  tabBarIcon: {
-    marginBottom: -3,
-  },
-});
+export const TabBarIcon = ({ Icon, color, focused }: TabBarIconProps) => {
+  const animatedStyle = useAnimatedStyle(() => ({
+    transform: [
+      {
+        scale: withSpring(focused ? 1.2 : 1, {
+          mass: 1,
+          damping: 15,
+          stiffness: 200,
+        }),
+      },
+    ],
+  }));
+
+  return (
+    <Animated.View style={animatedStyle}>
+      <Icon color={color} variant={focused ? 'Bold' : 'Linear'} size={24} />
+    </Animated.View>
+  );
+};

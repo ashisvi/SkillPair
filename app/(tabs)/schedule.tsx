@@ -1,13 +1,13 @@
 import { StyleSheet, Text, View } from 'react-native';
 
-const ChatScreen = () => {
+const ScheduleScreen = () => {
   return (
     <View>
-      <Text>ChatScreen</Text>
+      <Text>ScheduleScreen</Text>
     </View>
   );
 };
 
-export default ChatScreen;
+export default ScheduleScreen;
 
 const styles = StyleSheet.create({});

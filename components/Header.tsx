@@ -1,49 +1,81 @@
 import { Entypo } from '@expo/vector-icons';
-import { Notification, SearchNormal1 } from 'iconsax-react-native';
+import { SearchNormal1 } from 'iconsax-react-native';
 import React from 'react';
-import { Pressable, Text, View } from 'react-native';
-import { TextInput } from 'react-native-gesture-handler';
+import { Pressable, Text, TextInput, View } from 'react-native';
+import Animated, { FadeIn, FadeOut, Layout } from 'react-native-reanimated';
 
-export const Header = () => {
-  // State to control search bar visibility
-  const [showSearch, setShowSearch] = React.useState(false);
+type HeaderProps = {
+  title: string;
+  subtitle?: string;
+  showSearch?: boolean;
+  onSearch?: (text: string) => void;
+  rightIcon?: React.ReactNode;
+};
+
+export const Header = ({
+  title,
+  subtitle,
+  showSearch = false,
+  onSearch,
+  rightIcon,
+}: HeaderProps) => {
+  const [isSearchActive, setIsSearchActive] = React.useState(false);
+  const [searchQuery, setSearchQuery] = React.useState('');
+
+  const handleSearch = (text: string) => {
+    setSearchQuery(text);
+    onSearch?.(text);
+  };
 
   return (
-    <View className="relative h-28 w-full flex-row items-center justify-between gap-3 border border-gray-200 bg-white px-2 pt-8">
-      {/* Title - only shown when search is not active */}
-      {!showSearch && <Text className="ml-2 text-2xl font-bold text-cyan-500">SkillPair</Text>}
-
-      {/* Right side container for search and notification */}
-      <View className="flex-1 flex-row items-center justify-end gap-3 p-3">
-        {/* Search container - expands when active */}
-        <View
-          className={`rounded-full border border-gray-200 ${
-            showSearch ? 'flex-1 flex-row items-center' : ''
-          }`}>
-          {/* Search trigger button */}
-          <Pressable className="p-2" onPress={() => setShowSearch(true)}>
-            <SearchNormal1 size={22} color="black" variant="TwoTone" />
-          </Pressable>
-
-          {/* Search input and close button - only visible when search is active */}
+    <View className="border-b border-gray-100 bg-white px-4 pb-3">
+      <Animated.View layout={Layout.springify()} className="flex-row items-center justify-between">
+        {!isSearchActive && (
+          <Animated.View entering={FadeIn} exiting={FadeOut}>
+            <Text className="text-2xl font-bold text-gray-900">{title}</Text>
+            {subtitle && <Text className="mt-1 text-sm text-gray-500">{subtitle}</Text>}
+          </Animated.View>
+        )}
+        <View className={`flex-row items-center gap-3 ${isSearchActive ? 'flex-1' : ''}`}>
           {showSearch && (
-            <>
-              <TextInput placeholder="Search..." className="flex-1" />
-              <Entypo
-                name="cross"
-                size={22}
-                className="mr-2 h-full"
-                onPress={() => setShowSearch(false)}
-              />
-            </>
+            <Animated.View
+              layout={Layout.springify()}
+              className={`overflow-hidden rounded-full border border-gray-200 bg-gray-50 ${
+                isSearchActive ? 'flex-1 flex-row items-center' : ''
+              }`}>
+              <Pressable className="p-2" onPress={() => !isSearchActive && setIsSearchActive(true)}>
+                <SearchNormal1
+                  size={22}
+                  color={isSearchActive ? '#0891b2' : '#666666'}
+                  variant={isSearchActive ? 'Bold' : 'Linear'}
+                />
+              </Pressable>
+              {isSearchActive && (
+                <>
+                  <TextInput
+                    value={searchQuery}
+                    onChangeText={handleSearch}
+                    placeholder="Search..."
+                    className="flex-1 text-base text-gray-700"
+                    placeholderTextColor="#9CA3AF"
+                    autoFocus
+                  />
+                  <Pressable
+                    className="p-2"
+                    onPress={() => {
+                      setIsSearchActive(false);
+                      setSearchQuery('');
+                      onSearch?.('');
+                    }}>
+                    <Entypo name="cross" size={22} color="#666666" />
+                  </Pressable>
+                </>
+              )}
+            </Animated.View>
           )}
+          {!isSearchActive && rightIcon}
         </View>
-
-        {/* Notification button */}
-        <Pressable className="rounded-full border border-gray-200 p-2">
-          <Notification size={22} color="black" variant="TwoTone" />
-        </Pressable>
-      </View>
+      </Animated.View>
     </View>
   );
 };

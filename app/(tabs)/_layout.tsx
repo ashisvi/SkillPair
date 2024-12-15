@@ -1,22 +1,28 @@
 import { Tabs } from 'expo-router';
 import { Home, MenuBoard, Messages2, Profile } from 'iconsax-react-native';
-import { Header, TabBarIcon } from '~/components';
+import { TabBarIcon } from '~/components';
 
 const TabsLayout = () => {
   return (
     <Tabs
       screenOptions={{
-        tabBarShowLabel: false,
-        tabBarStyle: { height: 56, paddingTop: 8 },
+        tabBarStyle: {
+          height: 60,
+          paddingTop: 0,
+          backgroundColor: 'white',
+          borderTopWidth: 1,
+          borderTopColor: '#F3F4F6',
+        },
         tabBarHideOnKeyboard: true,
-        tabBarActiveTintColor: '#06B6D4',
+        tabBarActiveTintColor: '#0891B2',
+        tabBarInactiveTintColor: '#6B7280',
+        headerShown: false,
       }}>
       {/* Home Tab */}
       <Tabs.Screen
         name="index"
         options={{
-          title: 'SkillPair',
-          header: () => <Header />,
+          title: 'Discover',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon Icon={Home} color={color} focused={focused} />
           ),
@@ -27,6 +33,7 @@ const TabsLayout = () => {
       <Tabs.Screen
         name="chat"
         options={{
+          title: 'Messages',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon Icon={Messages2} color={color} focused={focused} />
           ),
@@ -35,8 +42,9 @@ const TabsLayout = () => {
 
       {/* Schedule Tab */}
       <Tabs.Screen
-        name="shedule"
+        name="schedule"
         options={{
+          title: 'Schedule',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon Icon={MenuBoard} color={color} focused={focused} />
           ),
@@ -47,6 +55,7 @@ const TabsLayout = () => {
       <Tabs.Screen
         name="profile"
         options={{
+          title: 'Profile',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon Icon={Profile} color={color} focused={focused} />
           ),

@@ -15,5 +15,125 @@
         "timestamp": "2024-12-10T14:25:00Z"
       }
     ]
+  },
+  {
+    "chatId": "chat2",
+    "user1": "user3",
+    "user2": "user1",
+    "messages": [
+      {
+        "sender": "user3",
+        "text": "Hey Alice! I saw you're interested in learning yoga. I'd love to help!",
+        "timestamp": "2024-12-11T09:00:00Z"
+      },
+      {
+        "sender": "user1",
+        "text": "That would be amazing! I can teach you some cooking basics in return.",
+        "timestamp": "2024-12-11T09:15:00Z"
+      },
+      {
+        "sender": "user3",
+        "text": "Perfect! How about we start with a virtual session this weekend?",
+        "timestamp": "2024-12-11T09:20:00Z"
+      }
+    ]
+  },
+  {
+    "chatId": "chat3",
+    "user1": "user8",
+    "user2": "user4",
+    "messages": [
+      {
+        "sender": "user4",
+        "text": "Hi Henry! I noticed you're a React developer. I'd love to learn while offering UI design tips!",
+        "timestamp": "2024-12-12T11:00:00Z"
+      },
+      {
+        "sender": "user8",
+        "text": "That sounds like a perfect match! I've been wanting to improve my design skills.",
+        "timestamp": "2024-12-12T11:05:00Z"
+      },
+      {
+        "sender": "user4",
+        "text": "Great! Should we start with the basics of React or dive into a small project?",
+        "timestamp": "2024-12-12T11:10:00Z"
+      },
+      {
+        "sender": "user8",
+        "text": "Let's start with a small project - it'll be more engaging. Maybe a portfolio website?",
+        "timestamp": "2024-12-12T11:15:00Z"
+      }
+    ]
+  },
+  {
+    "chatId": "chat4",
+    "user1": "user7",
+    "user2": "user6",
+    "messages": [
+      {
+        "sender": "user7",
+        "text": "Hola! I noticed you want to learn Spanish. I can help while learning photography!",
+        "timestamp": "2024-12-13T15:30:00Z"
+      },
+      {
+        "sender": "user6",
+        "text": "¡Perfecto! I'd love to teach you photography. What camera do you have?",
+        "timestamp": "2024-12-13T15:35:00Z"
+      },
+      {
+        "sender": "user7",
+        "text": "I have a Canon EOS M50. Mostly used it on auto mode so far 😅",
+        "timestamp": "2024-12-13T15:40:00Z"
+      }
+    ]
+  },
+  {
+    "chatId": "chat5",
+    "user1": "user15",
+    "user2": "user18",
+    "messages": [
+      {
+        "sender": "user15",
+        "text": "Hey Thomas! Interested in learning about blockchain while teaching VR development?",
+        "timestamp": "2024-12-14T10:00:00Z"
+      },
+      {
+        "sender": "user18",
+        "text": "Absolutely! I've been curious about blockchain tech. We could build a VR blockchain visualization!",
+        "timestamp": "2024-12-14T10:15:00Z"
+      },
+      {
+        "sender": "user15",
+        "text": "That's such a cool idea! Would be a great way to understand both technologies.",
+        "timestamp": "2024-12-14T10:20:00Z"
+      }
+    ]
+  },
+  {
+    "chatId": "chat6",
+    "user1": "user17",
+    "user2": "user19",
+    "messages": [
+      {
+        "sender": "user17",
+        "text": "Hi Nina! Love your traditional art. Want to collaborate on an NFT project?",
+        "timestamp": "2024-12-15T13:00:00Z"
+      },
+      {
+        "sender": "user19",
+        "text": "That would be fantastic! I've been wanting to enter the NFT space.",
+        "timestamp": "2024-12-15T13:10:00Z"
+      },
+      {
+        "sender": "user17",
+        "text": "Great! I can help with the digital marketing while you create the artwork.",
+        "timestamp": "2024-12-15T13:15:00Z"
+      },
+      {
+        "sender": "user19",
+        "text": "Perfect! I have some watercolor pieces we could digitize as a starting point.",
+        "timestamp": "2024-12-15T13:20:00Z"
+      }
+    ]
   }
 ]
