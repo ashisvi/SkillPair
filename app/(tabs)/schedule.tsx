@@ -1,9 +1,9 @@
 import { Calendar as CalendarIcon } from 'iconsax-react-native';
 import { useMemo, useState } from 'react';
-import { FlatList, Image, Modal, Pressable, Text, View } from 'react-native';
+import { FlatList, Modal, Pressable, Text, View } from 'react-native';
 import { Calendar } from 'react-native-calendars';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { Header } from '~/components';
+import { Header, SessionCard } from '~/components';
 import sessions from '~/data/sessions.json';
 import users from '~/data/users.json';
 
@@ -182,36 +182,12 @@ const ScheduleScreen = () => {
         contentContainerClassName="p-4"
         ItemSeparatorComponent={() => <View className="h-3" />}
         renderItem={({ item }) => (
-          <View className="rounded-xl border border-gray-100 bg-white p-4">
-            <View className="flex-row items-center justify-between">
-              <View className="max-w-[80%] flex-row items-center gap-3">
-                <Image
-                  source={{ uri: item.otherUser?.profilePicture }}
-                  className="h-10 w-10 rounded-full"
-                />
-                <View>
-                  <Text className="text-lg font-semibold text-gray-900">
-                    {item.otherUser?.name}
-                  </Text>
-                  <Text className="text-sm text-gray-500">{item.skillExchange[0]}</Text>
-                </View>
-              </View>
-              <View
-                className={`rounded-full px-3 py-1 ${
-                  item.status === 'upcoming' ? 'bg-cyan-50' : 'bg-purple-50'
-                }`}>
-                <Text
-                  className={`text-xs font-medium ${
-                    item.status === 'upcoming' ? 'text-cyan-600' : 'text-purple-600'
-                  }`}>
-                  {item.status}
-                </Text>
-              </View>
-            </View>
-            <View className="mt-3 flex-row items-center">
-              <Text className="text-sm text-gray-500">{item.time}</Text>
-            </View>
-          </View>
+          <SessionCard
+            otherUser={item.otherUser}
+            skillExchange={item.skillExchange}
+            status={item.status}
+            time={item.time}
+          />
         )}
         ListEmptyComponent={() => (
           <View className="mt-8 items-center">
