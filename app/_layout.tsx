@@ -21,23 +21,6 @@ export default function RootLayout() {
             animation: 'slide_from_right',
           }}>
           <Stack.Screen name="(tabs)" />
-          <Stack.Screen
-            name="[userId]"
-            options={{
-              headerShown: true,
-              headerTitle: 'Profile',
-              headerTitleStyle: {
-                color: '#0891B2',
-                fontSize: 18,
-                fontWeight: '600',
-              },
-              headerTitleAlign: 'center',
-              headerShadowVisible: false,
-              headerStyle: {
-                backgroundColor: 'white',
-              },
-            }}
-          />
         </Stack>
       </GestureHandlerRootView>
     </SafeAreaProvider>

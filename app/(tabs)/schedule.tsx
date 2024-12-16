@@ -183,6 +183,7 @@ const ScheduleScreen = () => {
         ItemSeparatorComponent={() => <View className="h-3" />}
         renderItem={({ item }) => (
           <SessionCard
+            sessionId={item.sessionId}
             otherUser={item.otherUser}
             skillExchange={item.skillExchange}
             status={item.status}

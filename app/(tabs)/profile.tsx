@@ -102,6 +102,7 @@ const ProfileScreen = () => {
               return (
                 <SessionCard
                   key={session.sessionId}
+                  sessionId={session.sessionId}
                   otherUser={otherUser}
                   skillExchange={session.skillExchange}
                   status={session.status}
