@@ -4,15 +4,95 @@
     "user1": "user1",
     "user2": "user2",
     "skillExchange": ["Guitar for Cooking"],
-    "scheduledTime": "2024-12-15T10:30:00Z",
-    "status": "upcoming"
+    "scheduledTime": "2024-12-18T10:30:00Z",
+    "status": "completed"
   },
   {
     "sessionId": "session2",
     "user1": "user3",
-    "user2": "user2",
-    "skillExchange": ["Yoga for Photography"],
-    "scheduledTime": "2024-12-17T15:00:00Z",
+    "user2": "user1",
+    "skillExchange": ["Yoga for Python Programming"],
+    "scheduledTime": "2024-12-19T14:00:00Z",
     "status": "completed"
+  },
+  {
+    "sessionId": "session3",
+    "user1": "user8",
+    "user2": "user4",
+    "skillExchange": ["React Development for UI Design"],
+    "scheduledTime": "2024-12-20T11:00:00Z",
+    "status": "upcoming"
+  },
+  {
+    "sessionId": "session4",
+    "user1": "user1",
+    "user2": "user11",
+    "skillExchange": ["Meditation for Cooking"],
+    "scheduledTime": "2024-12-20T15:00:00Z",
+    "status": "upcoming"
+  },
+  {
+    "sessionId": "session5",
+    "user1": "user7",
+    "user2": "user6",
+    "skillExchange": ["Spanish for Photography"],
+    "scheduledTime": "2024-12-20T16:30:00Z",
+    "status": "upcoming"
+  },
+  {
+    "sessionId": "session6",
+    "user1": "user5",
+    "user2": "user8",
+    "skillExchange": ["Mathematics for Web Development"],
+    "scheduledTime": "2024-12-21T13:00:00Z",
+    "status": "upcoming"
+  },
+  {
+    "sessionId": "session7",
+    "user1": "user1",
+    "user2": "user9",
+    "skillExchange": ["Spanish for Python Programming"],
+    "scheduledTime": "2024-12-21T09:00:00Z",
+    "status": "upcoming"
+  },
+  {
+    "sessionId": "session8",
+    "user1": "user10",
+    "user2": "user2",
+    "skillExchange": ["Music Production for Guitar"],
+    "scheduledTime": "2024-12-22T14:00:00Z",
+    "status": "upcoming"
+  },
+  {
+    "sessionId": "session9",
+    "user1": "user12",
+    "user2": "user8",
+    "skillExchange": ["Public Speaking for React Development"],
+    "scheduledTime": "2024-12-22T16:00:00Z",
+    "status": "upcoming"
+  },
+  {
+    "sessionId": "session10",
+    "user1": "user1",
+    "user2": "user4",
+    "skillExchange": ["Python Programming for Digital Art"],
+    "scheduledTime": "2024-12-23T10:00:00Z",
+    "status": "upcoming"
+  },
+  {
+    "sessionId": "session11",
+    "user1": "user3",
+    "user2": "user1",
+    "skillExchange": ["Fitness Coaching for Python"],
+    "scheduledTime": "2024-12-23T14:00:00Z",
+    "status": "upcoming"
+  },
+  {
+    "sessionId": "session12",
+    "user1": "user1",
+    "user2": "user7",
+    "skillExchange": ["Python for Japanese Language"],
+    "scheduledTime": "2024-12-24T11:00:00Z",
+    "status": "upcoming"
   }
 ]
