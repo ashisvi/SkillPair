@@ -8,7 +8,7 @@ import chats from '~/data/chats.json';
 import users from '~/data/users.json';
 import { getUserLastMessages } from '~/utils/chat';
 
-const ChatScreen = () => {
+const ActiveChatsScreen = () => {
   // For demo, we'll use user1 as the current user
   const currentUserId = 'user1';
   const lastMessages = getUserLastMessages(currentUserId);
@@ -72,4 +72,4 @@ const ChatScreen = () => {
   );
 };
 
-export default ChatScreen;
+export default ActiveChatsScreen;
