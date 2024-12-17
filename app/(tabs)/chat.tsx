@@ -63,7 +63,7 @@ const ActiveChatsScreen = () => {
               user={user!}
               message={message}
               index={index}
-              onPress={() => router.push(`/chat/${chatId}`)}
+              onPress={() => router.push(`/${user?.id}/chat`)}
             />
           ))
         )}

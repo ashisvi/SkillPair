@@ -10,14 +10,15 @@ import { formatMessageTime } from '~/utils/chat';
 
 const ChatScreen = () => {
   const [message, setMessage] = useState('');
-  const { chatId } = useLocalSearchParams();
+  const { userId } = useLocalSearchParams();
   const currentUserId = 'user1';
 
-  const chat = chats.find((c) => c.chatId === chatId);
-  if (!chat) return null;
-
-  const otherUserId = currentUserId === chat?.user1 ? chat?.user2 : chat?.user1;
-  const otherUser = users.find((u) => u.id === otherUserId);
+  const otherUser = users.find((u) => u.id === userId);
+  const chat = chats.find(
+    (c) =>
+      (c.user1 === currentUserId && c.user2 === userId) ||
+      (c.user1 === userId && c.user2 === currentUserId)
+  );
 
   return (
     <SafeAreaView className="flex-1 bg-white">

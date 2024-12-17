@@ -87,7 +87,7 @@ const SessionDetailScreen = () => {
       {/* Action Buttons */}
       <View className="border-t border-gray-100 p-4">
         <View className="flex-row gap-3">
-          <Link href={`/chat/${session.chatId}`} className="flex-1" asChild>
+          <Link href={`/${otherUserId}/chat`} className="flex-1" asChild>
             <Pressable className="flex-row items-center justify-center rounded-xl border border-gray-200 bg-gray-50 px-4 py-3">
               <MessageText1 size={20} color="#666666" variant="Linear" />
               <Text className="ml-2 text-base font-medium text-gray-700">Chat</Text>

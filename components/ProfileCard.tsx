@@ -1,6 +1,5 @@
-import { Link } from 'expo-router';
 import { Location, Star1 } from 'iconsax-react-native';
-import { Image, Text, View } from 'react-native';
+import { Image, Pressable, Text, View } from 'react-native';
 import Animated, { FadeInRight } from 'react-native-reanimated';
 
 type User = {
@@ -13,12 +12,18 @@ type User = {
   location: string;
 };
 
-export const ProfileCard = ({ user, index }: { user: User; index: number }) => {
+type ProfileCardProps = {
+  user: User;
+  index: number;
+  onPress?: () => void;
+};
+
+export const ProfileCard = ({ user, index, onPress }: ProfileCardProps) => {
   return (
-    <Link href={`/${user?.id}`} asChild>
-      <Animated.View
-        entering={FadeInRight.delay(index * 100)}
-        className="my-1.5 overflow-hidden rounded-xl bg-white shadow-sm">
+    <Animated.View
+      entering={FadeInRight.delay(index * 100)}
+      className="my-1.5 overflow-hidden rounded-xl bg-white shadow-sm">
+      <Pressable onPress={onPress}>
         <View className="flex-row p-3">
           <Image
             source={{
@@ -35,7 +40,6 @@ export const ProfileCard = ({ user, index }: { user: User; index: number }) => {
                 {user.bio}
               </Text>
             </View>
-
             <View className="flex-row items-center justify-between">
               <View className="flex-row items-center">
                 <Location size={16} color="#6B7280" variant="Bold" />
@@ -48,7 +52,6 @@ export const ProfileCard = ({ user, index }: { user: User; index: number }) => {
             </View>
           </View>
         </View>
-
         <View className="border-t border-gray-100 px-3 py-2">
           <Text className="text-xs text-gray-500">Skills: </Text>
           <View className="mt-1 flex-row flex-wrap gap-1">
@@ -59,7 +62,7 @@ export const ProfileCard = ({ user, index }: { user: User; index: number }) => {
             ))}
           </View>
         </View>
-      </Animated.View>
-    </Link>
+      </Pressable>
+    </Animated.View>
   );
 };

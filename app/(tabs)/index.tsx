@@ -1,3 +1,4 @@
+import { router } from 'expo-router';
 import { ArrowRight2, Notification } from 'iconsax-react-native';
 import { FlatList, Pressable, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -41,7 +42,12 @@ const Home = () => {
         data={users}
         renderItem={({ item, index }) => (
           <View className="px-4">
-            <ProfileCard key={item.id} user={item} index={index} />
+            <ProfileCard
+              key={item.id}
+              user={item}
+              index={index}
+              onPress={() => router.push(`/${item.id}/profile`)}
+            />
           </View>
         )}
         keyExtractor={(item) => item.id}
