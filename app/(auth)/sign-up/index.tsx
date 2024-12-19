@@ -2,13 +2,13 @@ import { Link, router } from 'expo-router';
 import { Eye, EyeSlash } from 'iconsax-react-native';
 import { useState } from 'react';
 import { KeyboardAvoidingView, Text, TextInput, TouchableOpacity, View } from 'react-native';
-import { Button } from '~/components';
+import { AuthLayout, Button } from '~/components';
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <>
+    <AuthLayout>
       <Text className="my-4 text-center text-2xl font-bold text-gray-500">Sign Up</Text>
 
       {/* Email input */}
@@ -53,7 +53,7 @@ const SignUp = () => {
           Sign in
         </Link>
       </View>
-    </>
+    </AuthLayout>
   );
 };
 

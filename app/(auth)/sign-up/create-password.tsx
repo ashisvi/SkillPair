@@ -2,13 +2,13 @@ import Checkbox from 'expo-checkbox';
 import { router } from 'expo-router';
 import { useState } from 'react';
 import { KeyboardAvoidingView, Text, TextInput, View } from 'react-native';
-import { Button } from '~/components';
+import { AuthLayout, Button } from '~/components';
 
 const CreatePassword = () => {
   const [showPassword, setShowPassword] = useState(true);
 
   return (
-    <>
+    <AuthLayout>
       <Text className="my-4 text-center text-2xl font-bold text-gray-500">Create Password</Text>
 
       <View className="gap-5">
@@ -53,7 +53,7 @@ const CreatePassword = () => {
           router.push('/sign-up/profile-detail-form');
         }}
       />
-    </>
+    </AuthLayout>
   );
 };
 

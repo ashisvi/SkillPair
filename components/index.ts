@@ -1,3 +1,4 @@
+export { AuthLayout } from './AuthLayout';
 export { Button } from './Button';
 export { ChatCard } from './ChatCard';
 export { Container } from './Container';

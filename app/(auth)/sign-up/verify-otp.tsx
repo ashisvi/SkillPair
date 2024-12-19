@@ -1,7 +1,7 @@
 import { router } from 'expo-router';
 import { useRef } from 'react';
 import { KeyboardAvoidingView, Text, TextInput, View } from 'react-native';
-import { Button } from '~/components';
+import { AuthLayout, Button } from '~/components';
 
 const VerifyOTP = () => {
   const inputs = useRef([]);
@@ -19,7 +19,7 @@ const VerifyOTP = () => {
   };
 
   return (
-    <>
+    <AuthLayout>
       <Text className="my-4 text-center text-2xl font-bold text-gray-500">Enter 6 digit OTP</Text>
 
       {/* OTP field */}
@@ -55,7 +55,7 @@ const VerifyOTP = () => {
           onPress={() => router.push('/sign-up/create-password')}
         />
       </View>
-    </>
+    </AuthLayout>
   );
 };
 
