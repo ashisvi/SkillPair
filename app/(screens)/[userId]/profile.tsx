@@ -2,6 +2,7 @@ import { Link, useLocalSearchParams } from 'expo-router';
 import { ArrowLeft, CalendarAdd, Location, MessageText1, Star1 } from 'iconsax-react-native';
 import { Image, Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+
 import { Button } from '~/components';
 import users from '~/data/users.json';
 
@@ -43,7 +44,7 @@ const UserProfile = () => {
         {/* Action Buttons */}
         <View className="border-b border-gray-100 p-4">
           <View className="flex-row gap-3">
-            <Link href={`./chat`} className="flex-1" asChild>
+            <Link href="./chat" className="flex-1" asChild>
               <Pressable className="flex-row items-center justify-center rounded-xl border border-gray-200 bg-gray-50 px-4 py-3">
                 <MessageText1 size={20} color="#666666" variant="Linear" />
                 <Text className="ml-2 text-base font-medium text-gray-700">Chat</Text>

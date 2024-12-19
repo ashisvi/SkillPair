@@ -1,12 +1,12 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 
-const UserProfile = () => {
+const ProfileDetailForm = () => {
   return (
     <View>
-      <Text>UserProfile</Text>
+      <Text>ProfileDetailForm</Text>
     </View>
   );
 };
 
-export default UserProfile;
+export default ProfileDetailForm;

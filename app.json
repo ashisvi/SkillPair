@@ -3,7 +3,7 @@
     "name": "SkillPair",
     "slug": "SkillPair",
     "version": "1.0.0",
-
+    "newArchEnabled": true,
     "scheme": "SkillPair",
     "web": {
       "bundler": "metro",
