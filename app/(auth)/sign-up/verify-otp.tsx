@@ -1,7 +1,6 @@
 import { router } from 'expo-router';
 import { useRef } from 'react';
-import { KeyboardAvoidingView, Text, View } from 'react-native';
-import { TextInput } from 'react-native-gesture-handler';
+import { KeyboardAvoidingView, Text, TextInput, View } from 'react-native';
 import { Button } from '~/components';
 
 const VerifyOTP = () => {
