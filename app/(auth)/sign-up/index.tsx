@@ -1,8 +1,7 @@
 import { Link, router } from 'expo-router';
-import { Eye, EyeSlash } from 'iconsax-react-native';
 import { useState } from 'react';
-import { KeyboardAvoidingView, Text, TextInput, TouchableOpacity, View } from 'react-native';
-import { AuthLayout, Button } from '~/components';
+import { Text, View } from 'react-native';
+import { AuthLayout, Button, InputField } from '~/components';
 
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -13,36 +12,16 @@ const SignUp = () => {
 
       {/* Email input */}
       <View className="my-2">
-        <KeyboardAvoidingView>
-          <Text className="mb-2 font-semibold text-gray-500">Full Name</Text>
-          <TextInput
-            placeholder="Enter your full name"
-            className="rounded-md border border-gray-200 bg-gray-50 px-2"
-            autoCapitalize="none"
-          />
-        </KeyboardAvoidingView>
+        <InputField label="Full name" placeholder="Enter your full name" />
       </View>
 
       {/* Password input */}
       <View className="my-2">
-        <KeyboardAvoidingView>
-          <Text className="mb-2 font-semibold text-gray-500">Email</Text>
-          <View className="flex-row rounded-md border border-gray-200 bg-gray-50 px-2">
-            <TextInput
-              placeholder="Enter email"
-              className="flex-1"
-              secureTextEntry={showPassword}
-              autoCapitalize="none"
-              autoCorrect={false}
-              autoComplete="off"
-            />
-            <TouchableOpacity
-              className="flex items-center justify-center pr-1"
-              onPress={() => setShowPassword(!showPassword)}>
-              {showPassword ? <Eye color="gray" size={24} /> : <EyeSlash color="gray" size={24} />}
-            </TouchableOpacity>
-          </View>
-        </KeyboardAvoidingView>
+        <InputField
+          label="Email"
+          placeholder="Enter email"
+          inputProps={{ autoCapitalize: 'none' }}
+        />
       </View>
 
       {/* Action buttons */}

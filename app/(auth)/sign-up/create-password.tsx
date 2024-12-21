@@ -1,8 +1,8 @@
 import Checkbox from 'expo-checkbox';
 import { router } from 'expo-router';
 import { useState } from 'react';
-import { KeyboardAvoidingView, Text, TextInput, View } from 'react-native';
-import { AuthLayout, Button } from '~/components';
+import { Text, View } from 'react-native';
+import { AuthLayout, Button, InputField } from '~/components';
 
 const CreatePassword = () => {
   const [showPassword, setShowPassword] = useState(true);
@@ -13,30 +13,20 @@ const CreatePassword = () => {
 
       <View className="gap-5">
         {/* Password input */}
-        <KeyboardAvoidingView>
-          <Text className="mb-2 font-semibold text-gray-500">Create Password</Text>
-          <TextInput
-            placeholder="Password"
-            className="rounded-md border border-gray-200 bg-gray-50 px-2"
-            autoCapitalize="none"
-            autoCorrect={false}
-            autoComplete="off"
-            secureTextEntry={showPassword}
-          />
-        </KeyboardAvoidingView>
+        <InputField
+          label="Create password"
+          placeholder="Password"
+          isSecureTextEntry={showPassword}
+          inputProps={{ autoCapitalize: 'none', autoCorrect: false, autoComplete: 'off' }}
+        />
 
         {/* Confirm password input */}
-        <KeyboardAvoidingView>
-          <Text className="mb-2 font-semibold text-gray-500">Confirm Password</Text>
-          <TextInput
-            placeholder="Confirm password"
-            className="rounded-md border border-gray-200 bg-gray-50 px-2"
-            autoCapitalize="none"
-            autoCorrect={false}
-            autoComplete="off"
-            secureTextEntry={showPassword}
-          />
-        </KeyboardAvoidingView>
+        <InputField
+          label="Confirm password"
+          placeholder="Password"
+          isSecureTextEntry={showPassword}
+          inputProps={{ autoCapitalize: 'none', autoCorrect: false, autoComplete: 'off' }}
+        />
       </View>
 
       {/* Show hide password checkbox */}

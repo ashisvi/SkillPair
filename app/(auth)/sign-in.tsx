@@ -1,8 +1,7 @@
 import { Link, useRouter } from 'expo-router';
-import { Eye, EyeSlash } from 'iconsax-react-native';
 import { useState } from 'react';
-import { KeyboardAvoidingView, Text, TextInput, TouchableOpacity, View } from 'react-native';
-import { AuthLayout, Button } from '~/components';
+import { Text, View } from 'react-native';
+import { AuthLayout, Button, InputField } from '~/components';
 import { useAuth } from '../context/AuthContext';
 
 const SignIn = () => {
@@ -22,36 +21,22 @@ const SignIn = () => {
 
       {/* Email input */}
       <View className="my-2">
-        <KeyboardAvoidingView>
-          <Text className="mb-2 font-semibold text-gray-500">Email</Text>
-          <TextInput
-            placeholder="Enter your email"
-            className="rounded-md border border-gray-200 bg-gray-50 px-2"
-            autoCapitalize="none"
-          />
-        </KeyboardAvoidingView>
+        <InputField
+          label="Email"
+          placeholder="Enter your email"
+          inputProps={{ autoCapitalize: 'none' }}
+        />
       </View>
 
       {/* Password input */}
       <View className="my-2">
-        <KeyboardAvoidingView>
-          <Text className="mb-2 font-semibold text-gray-500">Password</Text>
-          <View className="flex-row rounded-md border border-gray-200 bg-gray-50 px-2">
-            <TextInput
-              placeholder="Enter password"
-              className="flex-1"
-              secureTextEntry={showPassword}
-              autoCapitalize="none"
-              autoCorrect={false}
-              autoComplete="off"
-            />
-            <TouchableOpacity
-              className="flex items-center justify-center pr-1"
-              onPress={() => setShowPassword(!showPassword)}>
-              {showPassword ? <Eye color="gray" size={24} /> : <EyeSlash color="gray" size={24} />}
-            </TouchableOpacity>
-          </View>
-        </KeyboardAvoidingView>
+        <InputField
+          label="Password"
+          placeholder="Enter password"
+          isSecureTextEntry
+          showEyeButton
+          inputProps={{ autoCapitalize: 'none', autoCorrect: false, autoComplete: 'off' }}
+        />
       </View>
 
       {/* Action buttons */}

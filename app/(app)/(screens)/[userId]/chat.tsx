@@ -1,9 +1,10 @@
 import { Link, useLocalSearchParams } from 'expo-router';
-import { ArrowLeft, Send2 } from 'iconsax-react-native';
+import { Send2 } from 'iconsax-react-native';
 import { useState } from 'react';
-import { Pressable, ScrollView, Text, TouchableOpacity, View } from 'react-native';
+import { ScrollView, Text, TouchableOpacity, View } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { BackButton } from '~/components';
 import chats from '~/data/chats.json';
 import users from '~/data/users.json';
 import { formatMessageTime } from '~/utils/chat';
@@ -25,9 +26,7 @@ const ChatScreen = () => {
       {/* Header */}
       <View className="flex-row items-center justify-between p-4">
         <Link href="../" asChild>
-          <Pressable className="rounded-full border border-gray-200 bg-gray-50 p-2">
-            <ArrowLeft size={22} color="#666666" variant="Linear" />
-          </Pressable>
+          <BackButton />
         </Link>
         <Text className="text-lg font-semibold text-gray-900">{otherUser?.name}</Text>
         <View className="w-10" />

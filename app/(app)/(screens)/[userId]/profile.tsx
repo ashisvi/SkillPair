@@ -1,9 +1,9 @@
 import { Link, useLocalSearchParams } from 'expo-router';
-import { ArrowLeft, CalendarAdd, Location, MessageText1, Star1 } from 'iconsax-react-native';
+import { CalendarAdd, Location, MessageText1, Star1 } from 'iconsax-react-native';
 import { Image, Pressable, ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import { Button } from '~/components';
+import { BackButton, Button } from '~/components';
 import users from '~/data/users.json';
 
 const UserProfile = () => {
@@ -15,9 +15,7 @@ const UserProfile = () => {
       {/* Header */}
       <View className="flex-row items-center justify-between p-4">
         <Link href="../" asChild>
-          <Pressable className="rounded-full border border-gray-200 bg-gray-50 p-2">
-            <ArrowLeft size={22} color="#666666" variant="Linear" />
-          </Pressable>
+          <BackButton />
         </Link>
         <Text className="text-lg font-semibold text-gray-900">User Profile</Text>
         <View className="w-10" />
